@@ -1,0 +1,29 @@
+# Core Python Libraries
+scikit-learn==1.2.2
+numpy==1.24.3
+pandas==2.0.1
+pickle5==0.0.12
+
+# Web Frameworks
+fastapi==0.95.1
+uvicorn==0.22.0
+streamlit==1.22.0
+
+# Additional Web Libraries
+requests==2.30.0
+pydantic==1.10.7
+
+# Optional: For potential additional data processing
+scipy==1.10.1
+
+# Optional: For potential model explainability or advanced features
+joblib==1.2.0
+
+# Development and Debugging
+pytest==7.3.1
+ipython==8.12.0
+
+# Specific to your sentiment analysis project
+# Add any specific library versions used in your preprocessing or model
+# For example, if you used NLTK for text processing
+# nltk==3.8.1
