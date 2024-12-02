@@ -1,29 +1,54 @@
-# Core Python Libraries
-scikit-learn==1.2.2
-numpy==1.24.3
-pandas==2.0.1
-pickle5
-
-# Web Frameworks
 fastapi==0.95.1
 uvicorn==0.22.0
-streamlit==1.22.0
-
-# Additional Web Libraries
-requests==2.30.0
 pydantic==1.10.7
-
-# Optional: For potential additional data processing
+scikit-learn==1.2.2
+numpy==1.24.3
 scipy==1.10.1
+pickle5==0.0.12
+```
 
-# Optional: For potential model explainability or advanced features
-joblib==1.2.0
+5. Deployment Steps:
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
 
-# Development and Debugging
-pytest==7.3.1
-ipython==8.12.0
+# Login to Vercel
+vercel login
 
-# Specific to your sentiment analysis project
-# Add any specific library versions used in your preprocessing or model
-# For example, if you used NLTK for text processing
-# nltk==3.8.1
+# Initialize project (in your project directory)
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+Key Deployment Considerations:
+1. Model Storage:
+   - Create a `models/` directory in your project
+   - Upload your pickle files to this directory
+   - Ensure paths are correct in `load_models()`
+
+2. Serverless Limitations:
+   - Large model files might cause deployment issues
+   - Consider using smaller models or model compression
+   - Potential alternative: Use cloud storage like AWS S3 for model files
+
+3. Additional Vercel Tips:
+   - Use environment variables for sensitive configurations
+   - Monitor function cold starts and performance
+   - Consider upgrading to Pro plan for longer serverless function timeouts
+
+Potential Enhancements:
+- Add logging
+- Implement more robust error handling
+- Use cloud storage for model files
+- Implement caching strategies
+
+Troubleshooting:
+- If deployment fails, check:
+  1. Model file sizes
+  2. Python version compatibility
+  3. Dependencies in requirements.txt
+  4. Vercel logs for specific errors
+
+Would you like me to elaborate on any part of the deployment process or help you address specific deployment challenges?
