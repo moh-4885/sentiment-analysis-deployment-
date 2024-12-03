@@ -10,17 +10,15 @@ def preprocess(text):
     return text
 
 def load_models():
-    '''
-    Replace '..path/' by the path of the saved models.
-    '''
+    
     
     # Load the vectoriser.
-    file = open('..path/vectoriser-ngram-(1,2).pickle', 'rb')
+    file = open('vectoriser-ngram-(1,2).pickle', 'rb')
     vectoriser = pickle.load(file)
     file.close()
     
     # Load the LR Model.
-    file = open('..path/Sentiment-LRv1.pickle', 'rb')
+    file = open('Sentiment-LR.pickle', 'rb')
     LRmodel = pickle.load(file)
     file.close()
     

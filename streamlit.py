@@ -4,7 +4,7 @@ import json
 
 def predict_sentiment(texts):
     # API endpoint (adjust if your FastAPI is running on a different host/port)
-    url = " https://sentiment-anlyses-go745vrj9-moh-4885s-projects.vercel.app/predict"
+    url = "http://localhost:8000/predict"
     
     # Prepare the payload
     payload = {"texts": texts}
