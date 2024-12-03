@@ -4,51 +4,5 @@ pydantic==1.10.7
 scikit-learn==1.2.2
 numpy==1.24.3
 scipy==1.10.1
-pickle5==0.0.12
-```
+pickle5==0.0.11
 
-5. Deployment Steps:
-```bash
-# Install Vercel CLI globally
-npm install -g vercel
-
-# Login to Vercel
-vercel login
-
-# Initialize project (in your project directory)
-vercel
-
-# For production deployment
-vercel --prod
-```
-
-Key Deployment Considerations:
-1. Model Storage:
-   - Create a `models/` directory in your project
-   - Upload your pickle files to this directory
-   - Ensure paths are correct in `load_models()`
-
-2. Serverless Limitations:
-   - Large model files might cause deployment issues
-   - Consider using smaller models or model compression
-   - Potential alternative: Use cloud storage like AWS S3 for model files
-
-3. Additional Vercel Tips:
-   - Use environment variables for sensitive configurations
-   - Monitor function cold starts and performance
-   - Consider upgrading to Pro plan for longer serverless function timeouts
-
-Potential Enhancements:
-- Add logging
-- Implement more robust error handling
-- Use cloud storage for model files
-- Implement caching strategies
-
-Troubleshooting:
-- If deployment fails, check:
-  1. Model file sizes
-  2. Python version compatibility
-  3. Dependencies in requirements.txt
-  4. Vercel logs for specific errors
-
-Would you like me to elaborate on any part of the deployment process or help you address specific deployment challenges?
