@@ -4,5 +4,5 @@ pydantic==1.10.7
 scikit-learn==1.4.2
 numpy==1.24.3
 scipy==1.10.1
-pickle5==0.0.11
+pickle5==0.0.12
 
