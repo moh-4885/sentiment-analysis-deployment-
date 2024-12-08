@@ -3,6 +3,5 @@ uvicorn==0.22.0
 pydantic==1.10.7
 scikit-learn==1.5.2
 numpy==2.2.0
-scipy==1.10.1
 pickle5==0.0.11
 
